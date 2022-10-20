@@ -1,0 +1,32 @@
+<!-- <p>project1 works!</p> -->
+
+<h2  style="text-align:center; color:blue"> Civil Engineering Books list</h2>
+
+<button (click) ="isShowing = !isShowing">
+    <ng-container *ngIf="!isShowing"> Show Books</ng-container>
+    <ng-container *ngIf="isShowing ">Hide Books</ng-container>
+</button>
+
+<br><br>
+
+<ul *ngIf="isShowing">
+    <li>
+       <img [src]="src" [alt]="name" width="130px" />
+       <br>
+
+       {{name}} by {{author}}
+    </li>
+    <br><br>
+    <li>
+        <img [src]="src2" [alt]="name2" width="130px" />
+     <br>
+        {{name2}} by {{author2}}
+     </li>
+     <br><br>
+     <li>
+        <img [src]="src3" [alt]="name3" width="130px" />
+      <br>
+        {{name3}} by {{author3}}
+     </li>
+</ul>
+
